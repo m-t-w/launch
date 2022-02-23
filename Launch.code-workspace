@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"ruby.rubocop.onSave": false,
+		"ruby.useLanguageServer": true
+	}
+}
