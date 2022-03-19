@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"ruby.rubocop.onSave": false,
-		"ruby.useLanguageServer": true
+		"ruby.useLanguageServer": true,
+		"ruby.rubocop.executePath": "/Users/tommy/.rbenv/shims/"
 	}
 }
