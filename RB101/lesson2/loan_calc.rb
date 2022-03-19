@@ -84,7 +84,7 @@ mortgage_term_prompt = <<-MSG
   30 years
   MSG
 
-# TODO: validate this for the set of inputs above^^
+mortgage_terms = ['10', '15', '20', '25', '30']
 prompt <<-MSG
 One thing you’ll need to decide on when taking out a mortgage is the \“loan term\”
 This is the duration of the home loan, which can generally range from 10 to 30 years.
@@ -93,10 +93,11 @@ puts mortgage_term_prompt
 loan_term = ""
 loop do
   loan_term = gets.chomp
-  if valid_number?(loan_term)
+  if mortgage_terms.include?(loan_term)
     break
   else
-    puts "Hmm this doesn't seem to be a valid number"
+    prompt "Try picking one of the mortgage terms as explained above."
+    puts mortgage_terms.join(', ')
   end
 end
 loan_term_in_years = loan_term.to_i
